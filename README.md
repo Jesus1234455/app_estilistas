@@ -82,3 +82,34 @@ Para garantizar el funcionamiento fluido en smartphones y la disponibilidad en z
           ├──► [Resumen Quincenal / Conciliación]
           ├──► [Analítica Comparativa Mensual]
           └──► [Configurar Tarifas / Insumos]
+
+
++-----------------------------------+
+|  [≡] App Estilista      [Face ID] |
++-----------------------------------+
+|  NUEVO REGISTRO (00:12 s)         |
+|                                   |
+|  [ SERVICIO ]                     |
+|  ( ) Corte   (*) Tinte   ( ) Maq. |
+|                                   |
+|  [ CLIENTE ]                      |
+|  (*) ACCIONISTA       ( ) GENERAL |
+|                                   |
+|  [ INSUMOS CONSUMIDOS ]           |
+|  [+] Tinte Matiz (#405)  $15.000  |
+|  [+] Decolorante 50g     $ 8.000  |
+|                                   |
+|  -------------------------------  |
+|  Valor Bruto:           $180.000  |
+|  Comisión Empresa (40%):-$ 72.000  |
+|  Insumos:               -$ 23.000  |
+|  -------------------------------  |
+|  INGRESO NETO:          $ 85.000  |
+|                                   |
+|  [        GUARDAR EN APP       ]  |
++-----------------------------------+
+
+Referencias
+Android Developers. (2024). Guía de arquitectura de la app. Google. https://developer.android.com/topic/architecture?hl=es-419
+
+GanttPRO. (2024). Programas de control de obra y gestión de proyectos. GanttPRO Blog. https://blog.ganttpro.com/es/programas-de-control-de-obra-construccion/
