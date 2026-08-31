@@ -106,7 +106,6 @@ graph TD
 |                                   |
 |  [        GUARDAR EN APP       ]  |
 +-----------------------------------+
-
 Referencias
 Android Developers. (2024). Guía de arquitectura de la app. Google. https://developer.android.com/topic/architecture?hl=es-419
 
