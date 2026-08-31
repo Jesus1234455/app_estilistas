@@ -69,7 +69,7 @@ Para garantizar el funcionamiento fluido en smartphones y la disponibilidad en z
 ## 6. Diseño (Wireframes y Esquemas de Pantalla Móvil)
 
 ### 6.1. Flujo de Navegación Móvil
-mermaid
+```mermaid
 graph TD
     A[main.dart / MyApp] --> B[Autenticación Biométrica]
     B --> C[Dashboard Principal: MyHomePage]
@@ -77,13 +77,11 @@ graph TD
     C --> E[Resumen Quincenal / Conciliación]
     C --> F[Analítica Comparativa Mensual]
     C --> G[Configurar Tarifas / Insumos]
-
-
+    
     D --> D1[Seleccionar Servicio: Corte/Color/Maquillaje]
     D1 --> D2[Tipo Cliente: Accionista / General]
     D2 --> D3[Añadir Insumos Utilizados]
     D3 --> D4[Guardar en el Celular]
-
 +-----------------------------------+
 |  [≡] App Estilista      [Face ID] |
 +-----------------------------------+
@@ -108,7 +106,9 @@ graph TD
 |                                   |
 |  [        GUARDAR EN APP       ]  |
 +-----------------------------------+
+
 Referencias
 Android Developers. (2024). Guía de arquitectura de la app. Google. https://developer.android.com/topic/architecture?hl=es-419
 
 GanttPRO. (2024). Programas de control de obra y gestión de proyectos. GanttPRO Blog. https://blog.ganttpro.com/es/programas-de-control-de-obra-construccion/
+
