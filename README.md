@@ -70,47 +70,15 @@ Para garantizar el funcionamiento fluido en smartphones y la disponibilidad en z
 
 ### 6.1. Flujo de Navegación Móvil
 
-```mermaid
-graph TD
-    A[main.dart / MyApp] --> B[Autenticación Biométrica]
-    B --> C[Dashboard Principal: MyHomePage]
-    C --> D[+ Nuevo Registro Rápido]
-    C --> E[Resumen Quincenal / Conciliación]
-    C --> F[Analítica Comparativa Mensual]
-    C --> G[Configurar Tarifas / Insumos]
-    
-    D --> D1[Seleccionar Servicio: Corte/Color/Maquillaje]
-    D1 --> D2[Tipo Cliente: Accionista / General]
-    D2 --> D3[Añadir Insumos Utilizados]
-    D3 --> D4[Guardar en el Celular]
-
-
-+-----------------------------------+
-|  [≡] App Estilista      [Face ID] |
-+-----------------------------------+
-|  NUEVO REGISTRO (00:12 s)         |
-|                                   |
-|  [ SERVICIO ]                     |
-|  ( ) Corte   (*) Tinte   ( ) Maq. |
-|                                   |
-|  [ CLIENTE ]                      |
-|  (*) ACCIONISTA       ( ) GENERAL |
-|                                   |
-|  [ INSUMOS CONSUMIDOS ]           |
-|  [+] Tinte Matiz (#405)  $15.000  |
-|  [+] Decolorante 50g     $ 8.000  |
-|                                   |
-|  -------------------------------  |
-|  Valor Bruto:           $180.000  |
-|  Comisión Empresa (40%):-$ 72.000  |
-|  Insumos:               -$ 23.000  |
-|  -------------------------------  |
-|  INGRESO NETO:          $ 85.000  |
-|                                   |
-|  [        GUARDAR EN APP       ]  |
-+-----------------------------------+
-
-Referencias
-Android Developers. (2024). Guía de arquitectura de la app. Google. https://developer.android.com/topic/architecture?hl=es-419
-
-GanttPRO. (2024). Programas de control de obra y gestión de proyectos. GanttPRO Blog. https://blog.ganttpro.com/es/programas-de-control-de-obra-construccion/
+```text
+[ main.dart / MyApp ]
+          │
+          ▼
+[ Autenticación Biométrica ]
+          │
+          ▼
+[ Dashboard Principal: MyHomePage ]
+          ├──► [+ Nuevo Registro Rápido] ──► [Corte/Tinte/Maq] ──► [Insumos] ──► [Guardar]
+          ├──► [Resumen Quincenal / Conciliación]
+          ├──► [Analítica Comparativa Mensual]
+          └──► [Configurar Tarifas / Insumos]
