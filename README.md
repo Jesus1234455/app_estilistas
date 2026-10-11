@@ -1,115 +1,51 @@
-# Borrador del Proyecto: Aplicación Móvil de Gestión Operativa y Control Financiero para Estilistas
+<img width="1462" height="1111" alt="image" src="https://github.com/user-attachments/assets/c7c70cab-1282-4e44-9705-5071ccc4134b" /># Aplicación Móvil de Gestión Operativa y Control Financiero para Estilistas
 
 **Autor:** Jesus Abadia  
 **Programa:** Ciencias Computacionales con especialización en Ciberseguridad  
 **Curso:** COM-437ES Desarrollo de Aplicaciones Móviles  
-**Módulo / Término Académico:** Módulo 2  
-**Repositorio GitHub:** https://github.com/Jesus1234455/app_estilistas  
-
----
+**Módulo / Término Académico:** Módulo 4  
+**Repositorio GitHub:** [app_estilistas](https://github.com/Jesus1234455/app_estilistas)  
 
 ## 1. Descripción del Proyecto
-
-El presente proyecto abarca la concepción, arquitectura y diseño inicial de una **aplicación móvil nativa multiplataforma (Android e iOS)** orientada a optimizar el registro operativo, cálculo transaccional y control analítico de ingresos para profesionales independientes del sector de la estética y estilismo. 
-
-La herramienta responde a la necesidad de registrar en tiempo real (en menos de 15 segundos entre cliente y cliente) cada servicio prestado (cortes, tintes, maquillajes). El sistema automatiza el cálculo de deducciones variables (porcentaje retenido por el club/empresa, costo de productos utilizados y tarifas diferenciadas según tipo de cliente, como accionistas o clientes generales) y genera reportes analíticos para la conciliación de ingresos quincenales. El desarrollo del proyecto se estructura bajo metodologías de control de tiempos y planificación por etapas para garantizar entregables funcionales (GanttPRO, 2024).
-
----
+El presente proyecto abarca la concepción, arquitectura y diseño inicial de una aplicación móvil nativa multiplataforma orientada a optimizar el registro operativo y control financiero para profesionales del estilismo. La herramienta responde a la necesidad de registrar servicios en tiempo real (menos de 15 segundos) y automatiza el cálculo de deducciones y tarifas. El desarrollo se estructura bajo metodologías de planificación por etapas para garantizar entregables funcionales (GanttPRO, 2024).
 
 ## 2. Exposición del Problema
-
-En salones de belleza y clubes sociales, la compensación de los estilistas opera bajo un esquema de remuneración variable sujeto a múltiples variables financieras:
-* Retención de un porcentaje sobre el servicio por parte del club o salón.
-* Deducción por el costo de productos e insumos aplicados (tintes, decolorantes, ampolletas, queratinas).
-* Diferenciación de tarifas según la categoría del cliente (socios/accionistas vs. clientes externos).
-
-**El problema central** radica en la alta intensidad operativa durante jornadas de gran flujo de clientes, lo que dificulta el registro manual detallado. Esto genera pérdida de transacciones e incertidumbre al comparar la liquidación quincenal entregada por la administración con los servicios reales prestados. Desde el perfil de ciberseguridad, se contempla además la protección del almacenamiento local en el smartphone frente a accesos no autorizados a la información financiera del usuario.
-
----
+En salones de belleza, la remuneración variable de los estilistas está sujeta a múltiples factores (retenciones, costo de insumos, tipo de cliente). La alta intensidad operativa dificulta el registro manual, generando pérdida de transacciones e incertidumbre. Además, desde el perfil de ciberseguridad, se contempla la protección local de la información financiera del usuario.
 
 ## 3. Plataforma y Arquitectura Tecnológica
+Se define una arquitectura por capas basada en las guías oficiales de desarrollo móvil (Android Developers, 2024):
+* **Plataforma:** Flutter (Dart) para despliegue nativo multiplataforma.
+* **Patrón:** Separación de UI Layer y Data Layer.
+* **Base de Datos:** SQLite / Hive (Offline-First).
+* **Seguridad:** Autenticación biométrica y cifrado local.
 
-Para garantizar el funcionamiento fluido en smartphones y la disponibilidad en zonas con cobertura inestable dentro de las instalaciones, se define una arquitectura por capas basada en las guías oficiales de desarrollo móvil (Android Developers, 2024):
+## 4. Justificación del Enfoque de Desarrollo
+Para alcanzar el actual avance del proyecto, se tomó la decisión estratégica de priorizar la maquetación visual de la interfaz de usuario (UI) mediante Visual Studio Code. Este enfoque metodológico permite validar la intuición y la usabilidad de la aplicación antes de codificar la lógica interna en Dart. La prioridad es garantizar que el propósito central de la herramienta —un registro de servicios sin fricciones— se cumpla desde la primera interacción visual. Una vez confirmada la fluidez del diseño frontal, se procederá con la integración transaccional.
 
-* **Plataforma y Framework:** **Flutter** (lenguaje **Dart**) para despliegue multiplataforma nativo (Android e iOS) desde un único código base.
-* **Patrón de Arquitectura:** Capa de Interfaz de Usuario (UI Layer) separada de la Capa de Datos (Data Layer) con gestión de estado reactiva (Android Developers, 2024).
-* **Entorno de Desarrollo (IDE):** Visual Studio Code acoplado con Android SDK y emulador **Pixel 8 (android-x64)**.
-* **Base de Datos Local (Offline-First):** SQLite / Hive para la persistencia transaccional local sin necesidad de conexión continua a Internet.
-* **Seguridad Móvil:** Autenticación biométrica (Face ID / Huella dactilar) e integración de buenas prácticas de cifrado en almacenamiento local.
+## 5. Changelog (Registro de Cambios)
 
----
+**Pasado (Módulos 1 al 3) - [Versiones 0.1.0 a 0.4.0]**
+* **Concepción y Requerimientos:** Definición del problema operativo y establecimiento de funcionalidades clave (F-01 a F-05).
+* **Arquitectura de Software:** Selección de Flutter y SQLite/Hive para persistencia local.
+* **Prototipado:** Estructuración del flujo de navegación y wireframes de la pantalla principal.
 
-## 4. Interfaz de Usuario (UI Móvil) e Interfaz de Administrador
+**Presente (Avance al 50%) - [Versión 0.5.0]**
+* **Inicialización y Arquitectura:** Creación del proyecto en Flutter e implementación de la estructura base (separación UI/Lógica).
+* **Maquetación UI Inicial:** Desarrollo del punto de entrada (`main.dart`) bajo el enfoque visual.
 
-### 4.1. Interfaz de Usuario Móvil (Estilista)
-* **Pantalla de Registro Rápido (Home):** Botones de gran tamaño (*thumb-friendly*) para selección rápida de servicios (Corte, Tinte, Maquillaje), interruptor para tipo de cliente (Accionista / General) y selector táctil de insumos.
-* **Gestor Móvil de Tarifas:** Módulo para actualizar la tabla de precios y costos de productos de manera dinámica directamente en el teléfono.
-* **Panel de Control Quincenal (Dashboard):** Visualización del balance acumulado de la quincena (ingresos brutos, retención del club y costo de insumos).
-* **Módulo de Analítica y Tendencias:** Gráficos estadísticos para comparar el rendimiento financiero e histórico mes a mes.
+**Futuro (Módulos 5 al 8) - [Versiones 0.6.0 a 1.0.0]**
+* **Lógica Operativa y Persistencia:** Integración de la base de datos local (SQLite) y motor de cálculo financiero.
+* **Seguridad y Analítica:** Despliegue de autenticación biométrica y construcción gráfica del Dashboard de conciliación.
 
-### 4.2. Interfaz de Administrador (Configuración de Parámetros)
-* **Módulo de Reglas Financieras:** Configuración del porcentaje de comisión aplicable según el contrato o salón.
-* **Catálogo Maestro de Insumos:** Lista actualizable de precios de productos y materiales.
-* **Exportador de Reportes:** Generación de resúmenes consolidados en PDF/Excel para conciliación quincenal.
-
----
-
-## 5. Funcionalidad
-
-| Módulo | Funcionalidad Clave | Descripción del Requerimiento Móvil |
-| :--- | :--- | :--- |
-| **F-01** | Captura Táctil Rápida | Registro de servicio en < 15 segundos mediante componentes optimizados para smartphones. |
-| **F-02** | Motor de Cálculo Financiero | Cálculo automático: `Ingreso Neto = (Precio Servicio - Descuento Accionista) * % Comisión - Costo Insumos`. |
-| **F-03** | Modo Offline (Sin Red) | Permite registrar servicios en el teléfono sin conexión y sincroniza al detectar red. |
-| **F-04** | Gestión Dinámica de Tarifas | Modificación de precios de lista e insumos sin alterar el historial acumulado. |
-| **F-05** | Dashboard Analítico Móvil | Gráficos visuales de rendimiento quincenal e historial comparativo de ingresos. |
-
----
-
-## 6. Diseño (Wireframes y Esquemas de Pantalla Móvil)
-
-### 6.1. Flujo de Navegación Móvil
-
-```text
-[ main.dart / MyApp ]
-          │
-          ▼
-[ Autenticación Biométrica ]
-          │
-          ▼
-[ Dashboard Principal: MyHomePage ]
-          ├──► [+ Nuevo Registro Rápido] ──► [Corte/Tinte/Maq] ──► [Insumos] ──► [Guardar]
-          ├──► [Resumen Quincenal / Conciliación]
-          ├──► [Analítica Comparativa Mensual]
-          └──► [Configurar Tarifas / Insumos]
+<img width="1104" height="1130" alt="image" src="https://github.com/user-attachments/assets/2985eaff-305e-4a87-8909-e0fc8814b4ca" />
+<img width="1066" height="1039" alt="image" src="https://github.com/user-attachments/assets/2454fc80-4565-4098-ae57-4da5137a7d2b" />
+<img width="629" height="1127" alt="image" src="https://github.com/user-attachments/assets/5285a4b8-5b1e-43c6-998b-afb728c4f134" />
 
 
-+-----------------------------------+
-|  [≡] App Estilista      [Face ID] |
-+-----------------------------------+
-|  NUEVO REGISTRO (00:12 s)         |
-|                                   |
-|  [ SERVICIO ]                     |
-|  ( ) Corte   (*) Tinte   ( ) Maq. |
-|                                   |
-|  [ CLIENTE ]                      |
-|  (*) ACCIONISTA       ( ) GENERAL |
-|                                   |
-|  [ INSUMOS CONSUMIDOS ]           |
-|  [+] Tinte Matiz (#405)  $15.000  |
-|  [+] Decolorante 50g     $ 8.000  |
-|                                   |
-|  -------------------------------  |
-|  Valor Bruto:           $180.000  |
-|  Comisión Empresa (40%):-$ 72.000  |
-|  Insumos:               -$ 23.000  |
-|  -------------------------------  |
-|  INGRESO NETO:          $ 85.000  |
-|                                   |
-|  [        GUARDAR EN APP       ]  |
-+-----------------------------------+
 
-Referencias
-Android Developers. (2024). Guía de arquitectura de la app. Google. https://developer.android.com/topic/architecture?hl=es-419
 
-GanttPRO. (2024). Programas de control de obra y gestión de proyectos. GanttPRO Blog. https://blog.ganttpro.com/es/programas-de-control-de-obra-construccion/
+## Referencias
+
+Android Developers. (2024). *Guía de arquitectura de la app*. Google. https://developer.android.com/topic/architecture?hl=es-419
+
+GanttPRO. (2024). *Programas de control de obra y gestión de proyectos*. GanttPRO Blog. https://blog.ganttpro.com/es/programas-de-control-de-obra-construccion/
