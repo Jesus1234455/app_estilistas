@@ -1,4 +1,4 @@
-<img width="1462" height="1111" alt="image" src="https://github.com/user-attachments/assets/c7c70cab-1282-4e44-9705-5071ccc4134b" /># Aplicación Móvil de Gestión Operativa y Control Financiero para Estilistas
+# Aplicación Móvil de Gestión Operativa y Control Financiero para Estilistas
 
 **Autor:** Jesus Abadia  
 **Programa:** Ciencias Computacionales con especialización en Ciberseguridad  
